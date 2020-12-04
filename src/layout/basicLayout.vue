@@ -63,7 +63,9 @@
           </a-menu-item>
           <a-sub-menu key="sub3" title="Submenu">
             <a-menu-item key="15">
-             <router-link to="/js/vue/$attrs&$listeners">$attrs&$listeners</router-link>
+              <router-link to="/js/vue/$attrs&$listeners"
+                >$attrs&$listeners</router-link
+              >
             </a-menu-item>
             <a-menu-item key="16">
               Option 12
@@ -79,6 +81,7 @@
           :type="collapsed ? 'menu-unfold' : 'menu-fold'"
           @click="() => (collapsed = !collapsed)"
         />
+        <span>{{ time }}</span>
       </a-layout-header>
       <a-layout-content
         :style="{
@@ -95,16 +98,23 @@
 </template>
 
 <script>
+import getTime from "@/components/js/Date/date.js";
 export default {
   data() {
     return {
       collapsed: false,
+      time: "",
     };
   },
   methods: {
     toggleCollapsed() {
       this.collapsed = !this.collapsed;
     },
+  },
+  mounted() {
+    setInterval(() => {
+      this.time = getTime();
+    }, 1000);
   },
 };
 </script>
