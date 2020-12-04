@@ -1,6 +1,8 @@
 <template>
   <div class="parent">
     🎈父亲
+    <p>attrs就是没有在props中声明要接收的一些属性</p>
+    <p>props：{{ msg1 }}</p>
     <p>$attrs：{{ $attrs }}</p>
     <GrandSon v-bind="$attrs" v-on="$listeners" />
   </div>

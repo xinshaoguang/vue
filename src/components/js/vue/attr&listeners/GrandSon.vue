@@ -24,6 +24,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .child {
-  background: rgba(200, 221, 9, 0.4);
+  background: rgba(32, 202, 245, 0.651);
 }
 </style>
