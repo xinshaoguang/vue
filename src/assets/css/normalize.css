@@ -1,4 +1,4 @@
-HTML,
+html,
 body,
 div,
 h1,
@@ -24,8 +24,8 @@ td {
     border: none;
     font-family: "微软雅黑", "黑体", "宋体";
     font-size: 14px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 html,
