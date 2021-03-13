@@ -9,8 +9,8 @@ const routes = [{
     path: '/',
     name: 'basicLayout',
     component: basicLayout,
-    children: [
-      {
+    redirect: '/index',
+    children: [{
         path: '/index',
         name: 'index',
         component: () => import('@/views/index.vue')

@@ -16,11 +16,15 @@
         <a-menu-item key="2">
           <a-icon type="desktop" />
           <span>Option 2</span>
-        </a-menu-item>
-        <a-menu-item key="3">
-          <a-icon type="inbox" />
-          <span>Option 3</span>
-        </a-menu-item> -->
+        </a-menu-item>-->
+        <a-sub-menu key="sub0">
+          <span slot="title"><a-icon type="desktop" /><span>前端</span></span>
+          <a-menu-item key="3">
+             <router-link to="/index"><a-icon type="inbox" />
+            <span>front-end</span>
+            </router-link>
+          </a-menu-item>
+        </a-sub-menu>
         <a-sub-menu key="sub1">
           <span slot="title"><a-icon type="mail" /><span>html</span></span>
           <a-menu-item key="5">
