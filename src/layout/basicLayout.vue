@@ -102,7 +102,7 @@
 </template>
 
 <script>
-import getTime from "@/components/js/Date/date.js";
+import getTime from "@/assets/js/Date/date.js";
 export default {
   data() {
     return {
