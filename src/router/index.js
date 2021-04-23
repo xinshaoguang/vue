@@ -6,7 +6,7 @@ import importRoutes from './routerConfig'
 
 Vue.use(VueRouter)
 
-const routes = [{
+export const routes = [{
     path: '/',
     name: 'basicLayout',
     component: basicLayout,
