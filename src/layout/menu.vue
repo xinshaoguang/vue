@@ -1,5 +1,13 @@
 <template>
-  <a-menu :default-selected-keys="['1']" :default-open-keys="['sub1']" mode="inline" theme="dark" :inline-collapsed="collapsed">
+  <a-menu
+    :openKeys="openKeys"
+    @openChange="onOpenChange"
+    :default-selected-keys="['1']"
+    :default-open-keys="['sub1']"
+    mode="inline"
+    theme="dark"
+    :inline-collapsed="collapsed"
+  >
     <!-- <a-menu-item key="1">
           <a-icon type="pie-chart" />
           <span>Option 1</span>
@@ -67,10 +75,27 @@
 import { routes } from '@/router';
 export default {
   data() {
-    return {};
+    return {
+      openKeys: [],
+    };
   },
   created() {
     this.routes = routes;
+  },
+  methods: {
+    onOpenChange(openKeys) {
+      // 当菜单被展开时触发此处
+      /* 
+      经测试传入的变量openKeys是数组 点击已经展开的菜单时传入的是空数组
+      点击未展开的菜单时传入的是[当前展开菜单的key,点击的菜单key]
+      下面的if判断用openKeys === [] 无效 所以我只能判断数组length是否等于0
+      */
+      if (openKeys.length !== 0) {
+        this.openKeys = [openKeys[1]];
+      } else {
+        this.openKeys = [''];
+      }
+    },
   },
 };
 </script>
