@@ -63,9 +63,17 @@
         <a-menu-item key="15">
           <router-link to="/js/vue/$attrs&$listeners">$attrs&$listeners</router-link>
         </a-menu-item>
-        <a-menu-item key="16">
-          Option 12
-        </a-menu-item>
+        <a-sub-menu key="sub33" title="jsx">
+          <a-menu-item key="16">
+            <router-link to="/js/vue/jsx-jsx">jsx-jsx</router-link>
+          </a-menu-item>
+          <a-menu-item key="17">
+            <router-link to="/js/vue/jsx-js">jsx-js</router-link>
+          </a-menu-item>
+          <a-menu-item key="18">
+            <router-link to="/js/vue/jsx-vue">jsx-vue</router-link>
+          </a-menu-item>
+        </a-sub-menu>
       </a-sub-menu>
     </a-sub-menu>
   </a-menu>
@@ -91,7 +99,8 @@ export default {
       下面的if判断用openKeys === [] 无效 所以我只能判断数组length是否等于0
       */
       if (openKeys.length !== 0) {
-        this.openKeys = [openKeys[1]];
+        // this.openKeys = [openKeys[1]];
+        this.openKeys = openKeys;
       } else {
         this.openKeys = [''];
       }
