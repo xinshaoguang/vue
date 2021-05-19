@@ -12,7 +12,7 @@
 <script>
 export default {
   components: {
-    GrandFather: require("./attr&listeners/GrandFather").default,
+    GrandFather: require("./GrandFather").default,
   },
   data() {
     return {};
