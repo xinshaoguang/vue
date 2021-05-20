@@ -4,6 +4,10 @@ import basicLayout from '../layout/basicLayout.vue'
 import login from '@/views/login'
 import importRoutes from './routerConfig'
 
+import NProgress from "nprogress" //进度条
+import "nprogress/nprogress.css"  //进度条样式
+
+
 Vue.use(VueRouter)
 
 export const routes = [{
@@ -28,4 +32,14 @@ const router = new VueRouter({
   routes
 })
 
+
+
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  next()
+})
+
+router.afterEach(() => {
+  NProgress.done()
+})
 export default router
