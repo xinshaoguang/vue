@@ -1,27 +1,26 @@
-export default [
-    {
+export default [{
         name: '$attrs&$listeners',
         path: "/js/vue/$attrs&$listeners",
-        component: () => import("@/views/js/vue/attr&listeners")
+        component: () => import( /* webpackChunkName: "$attrs&$listeners" */ "@/views/js/vue/attr&listeners")
     },
     {
         name: 'jsx',
         path: "/js/vue/jsx-jsx",
-        component: () => import("@/views/js/vue/jsx/index.jsx")
+        component: () => import(/* webpackChunkName: "jsx-jsx" */"@/views/js/vue/jsx/index.jsx")
     },
     {
         name: 'jsx',
         path: "/js/vue/jsx-js",
-        component: () => import("@/views/js/vue/jsx/index.js")
+        component: () => import(/* webpackChunkName: "jsx-js" */"@/views/js/vue/jsx/index.js")
     },
     {
         name: 'jsx',
         path: "/js/vue/jsx-vue",
-        component: () => import("@/views/js/vue/jsx/index.vue")
+        component: () => import(/* webpackChunkName: "jsx-vue" */"@/views/js/vue/jsx/index.vue")
     },
     {
         name: 'draggable',
         path: "/plugs/draggable",
-        component: () => import("@/views//plugs/draggable")
+        component: () => import(/* webpackChunkName: "draggable" */"@/views//plugs/draggable")
     },
 ]
