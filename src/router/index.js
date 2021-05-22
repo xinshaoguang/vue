@@ -10,13 +10,17 @@ import "nprogress/nprogress.css"  //进度条样式
 
 Vue.use(VueRouter)
 
-export const routes = [{
+export const routes = [
+  // 
+  {
     path: '/',
     name: 'basicLayout',
     component: basicLayout,
-    redirect: '/index',
-    children: [{
-        path: '/index',
+    redirect: '/index',//路由重定向  父级路由 / +子路由 index
+    children: [
+      //子路由
+      {
+        path: 'index',
         name: 'index',
         component: () => import('@/views/index.vue')
       },
