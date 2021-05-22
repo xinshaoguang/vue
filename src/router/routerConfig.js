@@ -7,17 +7,17 @@ export default [{
         }
     },
     {
-        name: 'jsx',
+        name: 'jsx-jsx',
         path: "/js/vue/jsx-jsx",
         component: () => import( /* webpackChunkName: "jsx-jsx" */ "@/views/js/vue/jsx/index.jsx")
     },
     {
-        name: 'jsx',
+        name: 'jsx-js',
         path: "/js/vue/jsx-js",
         component: () => import( /* webpackChunkName: "jsx-js" */ "@/views/js/vue/jsx/index.js")
     },
     {
-        name: 'jsx',
+        name: 'jsx-vue',
         path: "/js/vue/jsx-vue",
         component: () => import( /* webpackChunkName: "jsx-vue" */ "@/views/js/vue/jsx/index.vue")
     },
