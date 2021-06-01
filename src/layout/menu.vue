@@ -8,7 +8,7 @@
           <a-icon type="desktop" />
           <span>Option 2</span>
         </a-menu-item>-->
-    <a-sub-menu key="sub0">
+    <!-- <a-sub-menu key="sub0">
       <span slot="title"><a-icon type="desktop" /><span>前端</span></span>
       <a-menu-item key="3">
         <router-link to="/index">
@@ -55,20 +55,26 @@
             <router-link to="/js/vue/moveModal">moveModal</router-link>
           </a-menu-item>
       </a-sub-menu>
-    </a-sub-menu>
+    </a-sub-menu> -->
+    <a-menu-item v-for="(item, index) in routes" :key="index">
+      <router-link :to="{ name: item.name }">{{ item.name }}</router-link>
+    </a-menu-item>
   </a-menu>
 </template>
 
 <script>
 import { routes } from '@/router';
+
 export default {
   data() {
     return {
       openKeys: [],
+      routes: [],
     };
   },
   created() {
-    this.routes = routes;
+    this.routes = routes[0].children;
+    debugger;
   },
   methods: {
     onOpenChange(openKeys) {
