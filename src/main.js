@@ -10,6 +10,8 @@ Vue.use(a)
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 Vue.use(Antd);
+import {MoveModal} from './components/moveModal/index.js';
+Vue.use(MoveModal);
 
 Vue.config.productionTip = false
 

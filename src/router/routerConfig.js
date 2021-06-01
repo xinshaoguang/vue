@@ -26,4 +26,9 @@ export default [{
         path: "/plugs/draggable",
         component: () => import( /* webpackChunkName: "draggable" */ "@/views//plugs/draggable")
     },
+    {
+        name: 'moveModal',
+        path: "/js/vue/moveModal",
+        component: () => import( /* webpackChunkName: "draggable" */ "@/views//js/vue/moveModal")
+    },
 ]

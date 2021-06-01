@@ -51,6 +51,9 @@
             <router-link to="/js/vue/jsx-vue">jsx-vue</router-link>
           </a-menu-item>
         </a-sub-menu>
+          <a-menu-item key="18">
+            <router-link to="/js/vue/moveModal">moveModal</router-link>
+          </a-menu-item>
       </a-sub-menu>
     </a-sub-menu>
   </a-menu>
