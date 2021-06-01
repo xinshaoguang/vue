@@ -74,7 +74,6 @@ export default {
   },
   created() {
     this.routes = routes[0].children;
-    debugger;
   },
   methods: {
     onOpenChange(openKeys) {
