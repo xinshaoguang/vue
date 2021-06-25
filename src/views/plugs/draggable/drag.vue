@@ -1,7 +1,18 @@
 <template>
   <div class="mod">
     <ul>
-      <draggable v-model="data.list" @change="change">
+      <draggable
+        v-model="data.list"
+        v-bind="{
+          group: 'form-draggable',
+          animation: 180,
+        }"
+        @change="change"
+        @add="handleAdd"
+        @end="$emit('end')"
+        chosenClass="chosen"
+        ghostClass="ghost"
+      >
         <!-- <transition-group name="bounce"> -->
         <li :style="{ background: item.bgc }" v-for="item in data.list" :key="item.name">
           <div v-if="item.name">{{ item.name }}</div>
@@ -33,11 +44,23 @@ export default {
       this.data;
       // debugger;
     },
+    handleAdd() {
+      this.data;
+      // debugger;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+// .chosen {
+//   background-color: red !important;
+//   color: #fff;
+// }
+// .ghost {
+//   background-color: blue !important;
+//   color: #fff;
+// }
 .mod {
   //   display: flex;
   //   flex-direction: row;

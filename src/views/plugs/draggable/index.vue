@@ -1,7 +1,8 @@
 <template>
   <div>
+    <A-a name="vue.draggable" href="http://www.itxst.com/vue-draggable/tutorial.html" /><br/>
     <a-button @click="add">add</a-button>
-    <Drag :data="data" />
+    <Drag :data="data" @end="print" />
   </div>
 </template>
 
@@ -15,19 +16,19 @@ export default {
     return {
       data: {
         list: [
-          { name: 'A-1', bgc: '#ccffff', key: '1' },
-          { name: 'A-2', bgc: '#ccffff', key: '2' },
-          { name: 'A-3', bgc: '#ccffff', key: '3' },
+          { name: 'A-1', bgc: '#ccffff', id: 'name_1' },
+          { name: 'A-2', bgc: '#ccffff', id: 'name_2' },
+          { name: 'A-3', bgc: '#ccffff', id: 'name_3' },
           {
             list: [
-              { name: 'B-1', bgc: '#ccff99', key: '4' },
-              { name: 'B-2', bgc: '#ccff99', key: '5' },
-              { name: 'B-3', bgc: '#ccff99', key: '6' },
+              { name: 'B-1', bgc: '#ccff99', id: 'name_4' },
+              { name: 'B-2', bgc: '#ccff99', id: 'name_5' },
+              { name: 'B-3', bgc: '#ccff99', id: 'name_6' },
               {
                 list: [
-                  { name: 'C-1', bgc: '#ffccff', key: '7' },
-                  { name: 'C-2', bgc: '#ffccff', key: '8' },
-                  { name: 'C-3', bgc: '#ffccff', key: '9' },
+                  { name: 'C-1', bgc: '#ffccff', id: 'name_7' },
+                  { name: 'C-2', bgc: '#ffccff', id: 'name_8' },
+                  { name: 'C-3', bgc: '#ffccff', id: 'name_9' },
                 ],
               },
             ],
@@ -43,7 +44,10 @@ export default {
     },
     add() {
       let randomNum = new Date().getTime().toString();
-      this.data.list.unshift({ name: 'A-' + randomNum, bgc: '#ccffff', key: randomNum });
+      this.data.list.unshift({ name: 'A-' + randomNum, bgc: '#ccffff', id: randomNum });
+    },
+    print() {
+      console.log(this.data, 'this.data');
     },
   },
 };
