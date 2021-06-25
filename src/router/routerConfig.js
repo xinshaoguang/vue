@@ -1,4 +1,6 @@
-export default [{
+export default [
+    // 路由配置
+    {
         name: '$attrs&$listeners',
         path: "/js/vue/$attrs&$listeners",
         component: () => import( /* webpackChunkName: "$attrs&$listeners" */ "@/views/js/vue/attr&listeners"),
@@ -24,11 +26,11 @@ export default [{
     {
         name: 'draggable',
         path: "/plugs/draggable",
-        component: () => import( /* webpackChunkName: "draggable" */ "@/views//plugs/draggable")
+        component: () => import( /* webpackChunkName: "draggable" */ "@/views/plugs/draggable")
     },
     {
         name: 'moveModal',
         path: "/js/vue/moveModal",
-        component: () => import( /* webpackChunkName: "draggable" */ "@/views//js/vue/moveModal")
+        component: () => import( /* webpackChunkName: "moveModal" */ "@/views/js/vue/moveModal")
     },
 ]
